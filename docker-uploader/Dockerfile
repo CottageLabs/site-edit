@@ -10,6 +10,7 @@ RUN echo "@extra http://nl.alpinelinux.org/alpine/v3.6/main" >> /etc/apk/reposit
         # apk add "libpq-dev"
         apk add build-base postgresql-dev mongodb mongodb-tools
 
+RUN pip install --upgrade pip enum34
 RUN pip install --no-cache-dir psycopg2 openpyxl pika xlrd
 
 COPY uploader /usr/src/app/
